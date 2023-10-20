@@ -36,13 +36,6 @@
 			<artifactId>spring-boot-starter-test</artifactId>
 			<scope>test</scope>
 		</dependency>
-		<!-- https://mvnrepository.com/artifact/org.pitest/pitest-junit5-plugin -->
-		<dependency>
-			<groupId>org.pitest</groupId>
-			<artifactId>pitest-junit5-plugin</artifactId>
-			<version>1.2.0</version>
-		</dependency>
-
 	</dependencies>
 
 	<build>
@@ -51,30 +44,6 @@
 				<groupId>org.springframework.boot</groupId>
 				<artifactId>spring-boot-maven-plugin</artifactId>
 			</plugin>
-			<plugin>
-				<groupId>org.pitest</groupId>
-				<artifactId>pitest-maven</artifactId>
-				<version>1.15.0</version>
-				<executions>
-					<execution>
-						<id>pit-report</id>
-						<phase>test</phase>
-						<goals>
-							<goal>mutationCoverage</goal>
-						</goals>
-					</execution>
-				</executions>
-
-				<configuration>
-					<targetClasses>
-						<param>com.fatec.*</param>
-					</targetClasses>
-					<targetTests>
-						<param>com.fatec.*</param>
-					</targetTests>
-				</configuration>
-			</plugin>
-
 		</plugins>
 	</build>
 
